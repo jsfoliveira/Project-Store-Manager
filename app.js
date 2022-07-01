@@ -8,7 +8,6 @@ const validation = require('./middlewares/ProductMiddleware');
 
 const app = express();
 
-
 app.use(bodyParser.json());
 
 // não remova esse endpoint, é para o avaliador funcionar
