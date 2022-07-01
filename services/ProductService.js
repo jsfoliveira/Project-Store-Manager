@@ -18,10 +18,10 @@ const getById = async (id) => {
 
 // Requisito 3
 const create = async (name) => {
-  const result = await Product.create(name);  
-    if (!result) return false;
+  const result = await Product.create(name);
+  if (!result) return false;
   return result;
-}
+};
 
 module.exports = {
   getAll,

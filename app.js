@@ -1,12 +1,14 @@
 const express = require('express');
 
+const bodyParser = require('body-parser');
+
 const ProductController = require('./controllers/ProductController');
 
 const validation = require('./middlewares/ProductMiddleware');
 
 const app = express();
 
-const bodyParser = require('body-parser');
+
 app.use(bodyParser.json());
 
 // não remova esse endpoint, é para o avaliador funcionar
