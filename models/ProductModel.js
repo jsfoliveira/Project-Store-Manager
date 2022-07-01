@@ -1,13 +1,13 @@
 const connection = require('./connection');
 
 const getAll = async () => {
-  const [products] = await connection.execute('SELECT * FROM products');
+  const [products] = await connection.execute('SELECT * FROM StoreManager.products');
 
     return products;
 };
 
 const getById = async (id) => {
-  const [products] = await connection.execute('SELECT * FROM products WHERE id=?', [id]);
+  const [products] = await connection.execute('SELECT * FROM StoreManager.products WHERE id=?', [id]);
   // o id não pode ser vazio
   if (products.length === 0) return null;
 
