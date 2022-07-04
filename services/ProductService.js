@@ -30,7 +30,6 @@ const updatedProduct = async (id, name) => {
   return result;
 };
 
-
 module.exports = {
   getAll,
   getById,
