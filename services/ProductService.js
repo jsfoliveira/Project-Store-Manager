@@ -23,8 +23,17 @@ const create = async (name) => {
   return result;
 };
 
+// Requisito 10
+const updatedProduct = async (id, name) => {
+  const result = await Product.updatedProduct(id, name);
+  if (!result) return false;
+  return result;
+};
+
+
 module.exports = {
   getAll,
   getById,
   create,
+  updatedProduct,
 };

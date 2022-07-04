@@ -25,8 +25,22 @@ const create = async (req, res) => {
   return res.status(201).json(products);
 };
 
+// Requisito 10
+const updatedProduct = async (req, res) => {
+  const { id } = req.params;
+  const { name } = req.body;
+  const response = await ProductService.updatedProduct(id, name);
+  const products = await ProductService.getById(id);
+  if (products.error) {
+    return res.status(404).json({ message: 'Product not found' });
+  }
+  return res.status(200).json(...products);
+
+}
+
 module.exports = {
   getAll,
   getById,
   create,
+  updatedProduct,
 };
