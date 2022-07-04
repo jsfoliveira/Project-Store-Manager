@@ -25,7 +25,6 @@ const getByIdSales = async (id) => {
   return sales;
 };
 
-
 module.exports = {
   getAllSales,
   getByIdSales,
