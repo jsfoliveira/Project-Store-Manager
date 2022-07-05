@@ -30,6 +30,9 @@ app.get('/sales/:id', SalesController.getByIdSales);
 // Requisito 10
 app.put('/products/:id', validation.validation, ProductController.updatedProduct);
 
+// Requisito 12
+app.delete('/products/:id', ProductController.deleteProduct)
+
 // não remova essa exportação, é para o avaliador funcionar
 // você pode registrar suas rotas normalmente, como o exemplo acima
 // você deve usar o arquivo index.js para executar sua aplicação 

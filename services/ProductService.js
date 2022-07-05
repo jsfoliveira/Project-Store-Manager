@@ -30,9 +30,24 @@ const updatedProduct = async (id, name) => {
   return result;
 };
 
+// Requisito 12
+const deleteProduct = async (id) => {
+  const products = await Product.deleteProduct(id);
+  if (!products) {
+    return {
+      error: {
+        status: 204,
+        message: 'Product not found',
+      },
+    };
+  }
+  return products;
+}
+
 module.exports = {
   getAll,
   getById,
   create,
   updatedProduct,
+  deleteProduct,
 };
