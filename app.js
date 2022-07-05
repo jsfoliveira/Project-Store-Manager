@@ -27,7 +27,7 @@ app.post('/products', validation.validation, ProductController.create);
 app.get('/sales', SalesController.getAllSales);
 app.get('/sales/:id', SalesController.getByIdSales);
 
-//Requisito 10
+// Requisito 10
 app.put('/products/:id', validation.validation, ProductController.updatedProduct);
 
 // não remova essa exportação, é para o avaliador funcionar

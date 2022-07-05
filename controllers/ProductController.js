@@ -29,14 +29,13 @@ const create = async (req, res) => {
 const updatedProduct = async (req, res) => {
   const { id } = req.params;
   const { name } = req.body;
-  const response = await ProductService.updatedProduct(id, name);
+  await ProductService.updatedProduct(id, name);
   const products = await ProductService.getById(id);
   if (products.error) {
     return res.status(404).json({ message: 'Product not found' });
   }
   return res.status(200).json(...products);
-
-}
+};
 
 module.exports = {
   getAll,
