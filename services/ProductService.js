@@ -42,7 +42,7 @@ const deleteProduct = async (id) => {
     };
   }
   return products;
-}
+};
 
 module.exports = {
   getAll,

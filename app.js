@@ -31,7 +31,7 @@ app.get('/sales/:id', SalesController.getByIdSales);
 app.put('/products/:id', validation.validation, ProductController.updatedProduct);
 
 // Requisito 12
-app.delete('/products/:id', ProductController.deleteProduct)
+app.delete('/products/:id', ProductController.deleteProduct);
 
 // não remova essa exportação, é para o avaliador funcionar
 // você pode registrar suas rotas normalmente, como o exemplo acima
